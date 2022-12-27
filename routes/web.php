@@ -53,7 +53,16 @@ Route::middleware(['auth'])->group(function () {
         // admin checkout
         Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
     });
+    // page our mentor
 
+    Route::get('/mentor', function() {
+        return view ('mentor');
+    });
+
+    // Page course
+    Route::get('/course', function() {
+        return view ('course');
+    });
 });
 
 // Route::get('/dashboard', function () {
